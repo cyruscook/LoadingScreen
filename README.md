@@ -20,7 +20,7 @@ The first line is css, second is HTML and third is JS.
 
 ## How to use
 
-Copy all of the code in [code.html](https://github.com/cyruscook/LoadingScreen/master/code.html) and place it as close to the top of your website as is humanely possible. I would suggest immediately after the `<html>` tag. For optimal performance it **must** be before any external dependencies like Bootstrap / JQuery. This code is written in vanilla JavaScript so does not require them.
+Copy all of the code in [code.html](https://raw.githubusercontent.com/cyruscook/LoadingScreen/master/code.html) and place it as close to the top of your website as is humanely possible. I would suggest immediately after the `<html>` tag. For optimal performance it **must** be before any external dependencies like Bootstrap / JQuery. This code is written in vanilla JavaScript so does not require them.
 
 ### Customisation
 
