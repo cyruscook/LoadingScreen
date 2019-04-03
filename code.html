@@ -1,0 +1,3 @@
+<div id="LoadingScreen"><style>#LoadingScreen{z-index:999;height:100vh;width:100vw;display:grid;top:0;left:0;position:fixed;background-color:#ededed}#LoadingScreen > h1{margin:auto;font-size:2.5rem;font-weight:600;}</style>
+<h1>Loading...</h1>
+<script>var LSDate=Date.now();addEventListener("pageshow",()=>{var e=()=>{document.getElementById("LoadingScreen").parentNode.removeChild(document.getElementById("LoadingScreen"))};Date.now()-LSDate>=500?e():setTimeout(e,Date.now()+500-Date.now())});</script></div>
