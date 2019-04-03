@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<script>var pageStart = Date.now();</script>
+
+<div id="LoadingScreen"><style>#LoadingScreen{z-index:999;height:100vh;width:100vw;display:grid;top:0;left:0;position:fixed;background-color:#ededed}#LoadingScreen > h1{margin:auto;font-size:2.5rem;font-weight:600;}</style>
+<h1>Loading...</h1>
+<script>var LSDate=Date.now();addEventListener("pageshow",()=>{var e=()=>{document.getElementById("LoadingScreen").parentNode.removeChild(document.getElementById("LoadingScreen"));document.getElementById("loading-seconds").innerHTML=(Date.now()-pageStart)/1000};Date.now()-LSDate>=500?e():setTimeout(e,Date.now()+500-Date.now())});</script></div>
+<head>
+	<title>Example Example Example</title>
+
+	<!-- Disable Caching (Thanks https://wp-mix.com/disable-caching-html/) -->
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+</head>
+<body>
+	<h1>Wow thats a lot of data</h1>
+
+	<p>Loading screen shown after <span id="loading-seconds"></span> seconds</p>
+
+	<p id="xml-text">Ajax still loading...</p>
+	<p>As you can see above ^ the loading screen does not wait for AJAX requests, however images will be fully loaded in before the page is displayed, leading to a more seamless user experience.</p>
+
+	<img id="img" src="" />
+
+	<script>
+
+		// Randomly add one of three images to the document body
+		imgs = ["f/f4/360-degree_Panorama_of_the_Southern_Sky.jpg", "9/97/The_Clouds-Big_Samples_Cloud123a.jpg", "f/ff/Pizigani_1367_Chart_10MB.jpg"];
+		var img = "https://upload.wikimedia.org/wikipedia/commons/" + imgs[Math.floor(Math.random() * imgs.length)];
+		document.getElementById("img").src = img;
+
+		xml = new XMLHttpRequest();
+		xml.onreadystatechange = function ()
+		{
+			if (xml.readyState == 4 && xml.status == 200)
+			{
+				document.getElementById("xml-text").innerHTML = "Recieved an response from AJAX after " + (Date.now() - xmlDate) / 1000 + " seconds";
+			}
+		}
+		xml.open("GET", "https://httpbin.org/delay/10", true);
+		var xmlDate = Date.now();
+		xml.send();
+
+	</script>
+
+	<style>
+		body
+		{
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		}
+
+		img
+		{
+			width: 100vw;
+			height: 100vh;
+		}
+	</style>
+</body>
+</html>
