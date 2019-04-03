@@ -5,11 +5,17 @@ A loading screen in 3 lines of code.
 The first line is css, second is HTML and third is JS.
 
 ## Table of Contents
+
 [How to use](#how-to-use)
+
 [Customisation](#customisation)
+
 &nbsp;&nbsp;&nbsp;&nbsp;[Delay](#delay)
+
 &nbsp;&nbsp;&nbsp;&nbsp;[Changing the Message](#changing-the-message)
+
 &nbsp;&nbsp;&nbsp;&nbsp;[Showing the loading screen multiple times](#showing-the-loading-screen-multiple-times)
+
 [How it works](#how-it-works)
 
 ## How to use
