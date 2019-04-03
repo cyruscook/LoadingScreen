@@ -1,6 +1,6 @@
 # LoadingScreen
 
-A loading screen in 3 lines of code.
+A loading screen in 3 lines of code. Completely automated - all you need to do is add the code.
 
 The first line is css, second is HTML and third is JS.
 
