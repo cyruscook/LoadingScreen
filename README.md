@@ -2,7 +2,7 @@
 
 A loading screen in 3 lines of code. Completely automated - all you need to do is add the code.
 
-The first line is css, second is HTML and third is JS.
+The first line is CSS, second is HTML and third is JS.
 
 ## Table of Contents
 
