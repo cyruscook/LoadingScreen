@@ -20,7 +20,7 @@ The first line is CSS, second is HTML and third is JS.
 
 ## How to use
 
-Copy all of the code in [code.html](https://raw.githubusercontent.com/cyruscook/LoadingScreen/master/code.html) and place it as close to the top of your website as is humanely possible. I would suggest immediately after the `<html>` tag. For optimal performance it **must** be before any external dependencies like Bootstrap / JQuery. This code is written in vanilla JavaScript so does not require them.
+Copy all of the code in [src/plain.html](https://raw.githubusercontent.com/cyruscook/LoadingScreen/master/src/plain.html) or [src/with_animation.html](https://raw.githubusercontent.com/cyruscook/LoadingScreen/master/src/with_animation.html) depending on whether you want a plain "Loading..." or an animation, and place it as close to the top of your website as is humanely possible. I would suggest immediately after the `<html>` tag. For optimal performance it should be before any external dependencies like Bootstrap / JQuery. This code is written in vanilla JavaScript so does not require them.
 
 ### Customisation
 
