@@ -1,0 +1,3 @@
+<div id="LoadingScreen"><style>#LoadingScreen{z-index:999;height:100vh;width:100vw;top:0;position:fixed;background-color:#ededed}@keyframes spinner{to{transform:rotate(360deg)}}.spinner:before{content:'';box-sizing:border-box;position:absolute;top:50%;left:50%;width:50px;height:50px;margin-top:-25px;margin-left:-25px;border-radius:50%;border:3px solid transparent;border-top-color:#00202A;animation:spinner 1s ease-in-out infinite}</style>
+<div class="spinner"></div>
+<script>var LSDate=Date.now();addEventListener("pageshow",()=>{var e=()=>{document.getElementById("LoadingScreen").parentNode.removeChild(document.getElementById("LoadingScreen"))};Date.now()-LSDate>=750?e():setTimeout(e,Date.now()+750-Date.now())});</script></div>
