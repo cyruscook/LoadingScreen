@@ -16,6 +16,8 @@ The first line is CSS, second is HTML and third is JS.
 
 &nbsp;&nbsp;&nbsp;&nbsp;[Showing the loading screen multiple times](#showing-the-loading-screen-multiple-times)
 
+&nbsp;&nbsp;&nbsp;&nbsp;[Removing the scrollbar](#removing-the-scrollbar)
+
 [How it works](#how-it-works)
 
 ## How to use
@@ -54,6 +56,63 @@ var LS = {
 	hide: 
 		() => {
 			LS.e.style.display = "none";
+		}
+}
+```
+
+##### Removing the scrollbar
+
+You might have noticed that the scrollbar is visible while the loading screen is on the screen. Here is how to fix this:
+
+**Regular Loading Screen**
+
+Change your body to:
+```html
+<body style="overflow: hidden;">
+```
+
+And change
+```javascript
+document.getElementById("LoadingScreen").parentNode.removeChild(document.getElementById("LoadingScreen"))
+```
+to
+```javascript
+document.getElementById("LoadingScreen").parentNode.removeChild(document.getElementById("LoadingScreen"));document.body.style.overflow = "";
+```
+
+**Retriggerable Loading Screen**
+
+Change
+```javascript
+var LS = {
+	e:
+		document.getElementById("LoadingScreen"),
+	show:
+		() => {
+			LS.e.style.display = "";
+		},
+	hide: 
+		() => {
+			LS.e.style.display = "none";
+		}
+}
+```
+to
+
+```javascript
+var LS = {
+	e:
+		document.getElementById("LoadingScreen"),
+	show:
+		() => {
+			LS.e.style.display = "";
+			document.body.style.overflow = "hidden";
+			
+		},
+	hide: 
+		() => {
+			LS.e.style.display = "none";
+			document.body.style.overflow = "";
 		}
 }
 ```
