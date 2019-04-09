@@ -44,13 +44,17 @@ To do this, find `document.getElementById("LoadingScreen").parentNode.removeChil
 
 By adding the following two functions to your code you can use `LS.show()` and `LS.hide()`:
 ```javascript
-LS = {
-	show: () => {
-		document.getElementById("LoadingScreen").style.display = ""
-	},
-	hide: () => {
-		document.getElementById("LoadingScreen").style.display = "none"
-	}
+var LS = {
+	e:
+		document.getElementById("LoadingScreen"),
+	show:
+		() => {
+			LS.e.style.display = "";
+		},
+	hide: 
+		() => {
+			LS.e.style.display = "none";
+		}
 }
 ```
 
